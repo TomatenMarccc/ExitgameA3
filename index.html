@@ -1,0 +1,67 @@
+
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <title>Reaktor Abschaltung</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+</head>
+<body>
+  <h1>Abschaltvorgang</h1>
+
+  <div class="instruction">
+    Alle Reaktorstäbe müssen der Reihenfolge nach abgeschaltet werden. <br>
+    Die Regler müssen in einem Zeitfenster von 4–5 Sekunden auf 0% gebracht werden. <br>
+    Wird das Zeitfenster verpasst, wird der Vorgang neu gestartet.
+  </div>
+
+  <div class="status" id="status"></div>
+  <div class="timer" id="timer">0.00 s</div>
+
+  <div id="sliders">
+    <div class="slider-container">
+      <div class="slider-wrapper">
+        <input type="range" min="0" max="100" value="0" class="slider">
+        <img src="images/Knopf.png" class="knopf" alt="Knopf">
+      </div>
+    </div>
+    <div class="slider-container">
+      <div class="slider-wrapper">
+        <input type="range" min="0" max="100" value="0" class="slider">
+        <img src="images/Knopf.png" class="knopf" alt="Knopf">
+      </div>
+    </div>
+    <div class="slider-container">
+      <div class="slider-wrapper">
+        <input type="range" min="0" max="100" value="0" class="slider">
+        <img src="images/Knopf.png" class="knopf" alt="Knopf">
+      </div>
+    </div>
+    <div class="slider-container">
+      <div class="slider-wrapper">
+        <input type="range" min="0" max="100" value="0" class="slider">
+        <img src="images/Knopf.png" class="knopf" alt="Knopf">
+      </div>
+    </div>
+    <div class="slider-container">
+      <div class="slider-wrapper">
+        <input type="range" min="0" max="100" value="0" class="slider">
+        <img src="images/Knopf.png" class="knopf" alt="Knopf">
+      </div>
+    </div>
+  </div>
+
+  <div class="lamp" id="lamp"></div>
+
+  <!-- Audio Elemente     3,5,2,4,1-->
+  <audio id="startSound" src="sounds/start.mp3"></audio>
+  <audio id="completeSound" src="sounds/complete.mp3"></audio>
+  <audio id="sliderSound" src="sounds/slider.mp3"></audio>
+  <audio id="errorSound" src="sounds/error.mp3"></audio>
+  <audio id="successSound" src="sounds/success.mp3"></audio>
+
+  <script src="script.js"></script>
+</body>
+</html>
